@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.limit(2)
+    @users = User.all
   end
 
   # GET /users/1
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    binding.pry
     @user = User.new
   end
 

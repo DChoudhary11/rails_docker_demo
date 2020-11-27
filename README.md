@@ -12,3 +12,6 @@ docker build -rm -t rails-image .
 ```
 docker run -d --name rails-app -p 3000:3000 --net host rails-image
 ```
+```
+docker run -dp 3000:3000 -it --name rails-app --net host -v $(pwd):/projects rails-image
+```
